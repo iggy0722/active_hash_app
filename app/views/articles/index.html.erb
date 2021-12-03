@@ -4,9 +4,7 @@
 <% @articles.each do |article| %>
   <div class="article">
     <div class="article-genre">
-      <% if article.genre.id = 2 %>
-      <%= image_tag "iggy.png" %>
-      <% end %>
+      <%= article.genre.name %>
     </div>
     <div class="article-title">
       <%= article.title %>
