@@ -1,10 +1,14 @@
 <h1>記事一覧</h1>
 <%= link_to "投稿する", new_article_path, class:"post" %>
+<% time1 = Time.now %>
+<% time2 = @articles.title.last %>
+<%= time1 %>
+<%= time2 %>
 
 <% @articles.each do |article| %>
   <div class="article">
     <div class="article-genre">
-      <%= article.genre.name %>
+      <%= article.genre.id %>
     </div>
     <div class="article-title">
       <%= article.title %>
