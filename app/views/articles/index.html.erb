@@ -1,14 +1,18 @@
 <h1>記事一覧</h1>
 <%= link_to "投稿する", new_article_path, class:"post" %>
-<% time1 = Time.now %>
-<% time2 = @articles.title.last %>
-<%= time1 %>
-<%= time2 %>
+<%# time1 = Time.now %>
+<%# time2 = @articles.title.last %>
+<%#= time1 %>
+<%#= time2 %>
 
 <% @articles.each do |article| %>
   <div class="article">
     <div class="article-genre">
-      <%= article.genre.id %>
+      <% if article.genre.id == 2 %>
+      <div class="set">
+      <%= image_tag "iggy.png", size: '50x50' %>
+      </div>
+      <% end %>
     </div>
     <div class="article-title">
       <%= article.title %>
